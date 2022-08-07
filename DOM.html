@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DOM</h1>
+    <section>
+        <div id="first-blog">
+            <h3 >Blog-1</h3>
+            <p class="blog-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, iusto!</p>
+        </div>
+        <div id="second-blog">
+            <h3>Blog-2</h3>
+            <p class="blog-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, iusto!</p>
+        </div>
+        <div id="third-blog">
+            <h3>Blog-3</h3>
+            <p class="blog-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, iusto!</p>
+        </div>
+        <div id="fourth-blog">
+            <h3>Blog-4</h3>
+            <p class="blog-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, iusto!</p>
+        </div>
+    </section>
+    <script>
+        // getElementsByTagName
+        const headings = document.getElementsByTagName('h3');
+        // console.log(h1);
+        for(const h1 of headings){
+            h1.style.color = 'red';
+            h1.style.padding = '10px 20px';
+            h1.style.backgroundColor = 'gray'
+        }
+        // getElementsByClassName
+        const paragraphs = document.getElementsByClassName('blog-text');
+        for(const p of paragraphs){
+            p.style.border = '2px solid red';
+            p.style.padding = '10px 20px';
+            p.style.backgroundColor = 'yellow';
+        }
+        // getElementById
+        const firstBlog = document.getElementById('first-blog');
+        firstBlog.style.backgroundColor = 'salmon';
+        firstBlog.style.padding = '10px 20px';
+        
+        const secondBlog = document.getElementById('second-blog');
+        secondBlog.style.padding = '10px 20px';
+        secondBlog.style.backgroundColor = 'green';
+
+        const thirdBlog = document.getElementById('third-blog');
+        thirdBlog.style.padding = '10px 20px';
+        thirdBlog.style.backgroundColor = 'blue';
+
+        const fourthBlog = document.getElementById('fourth-blog');
+        fourthBlog.style.padding = '10px 20px';
+        fourthBlog.style.backgroundColor = 'skyblue';
+
+        // querySelectorAll
+        const allBlogText = document.querySelectorAll('.blog-text');
+        for(const blogText of allBlogText){
+            blogText.style.borderRadius = '10px';
+            blogText.style.color = 'blue';
+        }
+
+        //NodeList,HTMLCollection
+        //when we use getElementsByTagName, getElementsByClassName, getElementById then We can see HTMLCollection
+        //when we use querySelectorAll then We can see NodeList
+
+        //childNodes,parentNode
+
+        //getAttribute,setAttribute
+        const blogContainerId = document.getElementById('blog-container');
+        blogContainerId.setAttribute('title','I am here');
+        blogContainerId.getAttribute('title');
+        console.log(blogContainerId);
+    </script>
+</body>
+</html>
