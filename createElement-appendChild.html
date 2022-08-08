@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="blog">
+        <li>Blog-01</li>
+        <li>Blog-02</li>
+        <li>Blog-03</li>
+        <li>Blog-04</li>
+    </ul>
+    <section id="container">
+        <article>
+            <h3>Box-01</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur ab possimus quibusdam distinctio deleniti exercitationem molestiae aliquam eligendi explicabo excepturi.</p>
+        </article>
+        <article>
+            <h3>Box-02</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur ab possimus quibusdam distinctio deleniti exercitationem molestiae aliquam eligendi explicabo excepturi.</p>
+        </article>
+        <article>
+            <h3>Box-03</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur ab possimus quibusdam distinctio deleniti exercitationem molestiae aliquam eligendi explicabo excepturi.</p>
+        </article>
+    </section>
+    <script>
+        //createElement
+        const li = document.createElement('li');
+        li.innerText = 'Blog-05';
+        //Find Parent
+        const ul = document.getElementById('blog');
+        //appendChild
+        ul.appendChild(li);
+
+        
+        //createElement
+        const h3 = document.createElement('h3');
+        h3.innerText = 'Box-04'
+        const p = document.createElement('p');
+        p.innerText = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur ab possimus quibusdam distinctio deleniti exercitationem molestiae aliquam eligendi explicabo excepturi.';
+        //Find Parent
+        const article = document.createElement('article');
+        //appendChild
+        article.appendChild(h3);
+        article.appendChild(p);
+        console.log(article.innerHTML);
+
+        //Find Parent
+        const container = document.getElementById('container');
+        container.appendChild(article);
+    </script>
+</body>
+</html>
